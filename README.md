@@ -192,3 +192,63 @@ letters, there is a maximum of 52 possible characters. Therefore, the size of
 the `req_count` and `window` hash maps will be at most 52, regardless of the
 length of `t`. <br />
 Therefore, the space complexity of this solution will be *O*(1).
+
+<br />
+
+## Longest Substring Without Repeating Characters
+Given a string, `input_str`, return the length of the longest substring without
+repeating characters.
+
+### Solution
+1. Traverse the input string.
+2. Use a hash map to store elements along with their respective indexes.
+    1. If the current element is present in the hash map, check whether it’s 
+    already present in the current window. If it is, we have found the end of
+    the current window and the start of the next. We check if it’s longer than
+    the longest window seen so far and update it accordingly.
+    2. Store the current element in the hash map with the key as the element
+    and the value as the current index.
+3. At the end of the traversal, we have the length of the longest substring
+with all distinct characters.
+
+### Time Complexity
+The time complexity of this solution is *O*(*n*), where `n` is the length of
+the input string. This is because we have to iterate over all the elements in 
+the string.
+
+### Space Complexity
+The space complexity of this solution is *O*(1), which is the space occupied by
+the hash map. This is because there’s only a limited number of unique
+characters that could appear in the input string.
+
+<br />
+
+## Minimum Size Subarray
+Given an array of positive integers, `nums`, and a positive integer, `target`,
+find the minimum length of a contiguous subarray whose sum is greater than or 
+equal to the `target`. If no such subarray is found, return `0`.
+
+### Solution
+1. We start by initializing a variable, `window_size`, with positive infinity
+to store the size of the minimum subarray. In addition, we initialize sum
+with `0`.
+2. We use the `start` and `end` variables to track the left and right end of
+the subarray, respectively. Initially, we set both variables to `0`.
+3. We slide the window over the input array using these two variables. In each
+iteration, we increment `end` and add the new element of the window into the
+`sum`. If `sum` is greater than or equal to `target`, we increment `start`.
+4. If `sum` exceeds or equals the `target`, we compare the current subarray
+size with `window_size`. The smaller of the two values will be stored in
+`window_size`.
+5. We repeat steps 3 and 4 to find the smallest subarray.
+6. Finally, if `window_size` is positive infinity, we come to know that there
+was no subarray whose sum was equal to or greater than `target`. Therefore, we
+return `0`. Otherwise, we return `window_size` as the length of the minimum 
+size subarray.
+
+### Time Complexity
+The time complexity of this solution is *O*(*n*).
+
+### Space Complexity
+The space complexity of this solution is *O*(1), since we are not using any 
+extra space.
