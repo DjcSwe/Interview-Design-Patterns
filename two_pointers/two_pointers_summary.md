@@ -14,7 +14,7 @@ or string.
 * **Dynamic pointer movement:** Both pointers move independently of each other according to certain conditions or
 criteria. In addition, both pointers might move along the same or two different data structures.
 
----
+<br />
 
 ## Valid Palindrome
 Write a function that takes a string, `s`, as an input and determines whether or not it is a palindrome.
@@ -33,7 +33,7 @@ run (*n*/2) times, since two pointers are traversing toward each other.
 ### Space Complexity
 The space complexity is *O*(1), since we use constant space to store two indexes.
 
----
+<br />
 
 ## Sum of Three Values
 Given an array of integers, `nums`, and an integer value, `target`, determine if there are any three integers in `nums`
@@ -60,7 +60,7 @@ solution is *O*(*nlog*(*n*) + *n<sup>2<sup />*), which simplifies to O(*n<sup>2<
 ### Space Complexity
 Because we use the build-in Python `sort()` function, the space complexity is *O*(*n*).
 
----
+<br />
 
 ## Remove n<sup>th</sup> Node from End of List
 Given a singly linked list, remove the n<sup>th</sup> node from the end of the list and return its head.
@@ -79,7 +79,7 @@ The time complexity is *O*(*n*), where `n` is the number of nodes in the linked 
 ### Space Complexity
 The space complexity is *O*(1) because we use constant space to store two pointers.
 
----
+<br />
 
 ## Sort Colors
 Given an array, colors, which contains a combination of the following three elements:
@@ -103,7 +103,7 @@ The time compolexity of this solution is *O*(*n*) since we're only traversing th
 ### Space Complexity
 The space complexity of this solution is *O*(1) since no extra space is used.
 
----
+<br />
 
 ## Reverse Words in a String
 Given a sentence, reverse the order of its words without affecting the order of letters within the given word. 
