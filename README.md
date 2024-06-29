@@ -1,5 +1,5 @@
 ## Design Patterns
-###### Resourced from educative.io.
+###### Resourced from [educative.io](https://www.educative.io/)
 
 Coding interviews are hard. You never know what question you’ll be asked, and there are so many of them!
 To make matters worse, the interviewer expects you to eventually (if not immediately) converge on an optimal solution.
