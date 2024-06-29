@@ -50,11 +50,12 @@ class LinkedList:
         result += ""
         return result
 
-    class LinkedListNode:
-        # __init__ will be used to make a LinkedListNode type object.
-        def __init__(self, data, next=None):
-            self.data = data
-            self.next = next
+
+class LinkedListNode:
+    # __init__ will be used to make a LinkedListNode type object.
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
 
 
 def print_list_with_forward_arrow(linked_list_node):
