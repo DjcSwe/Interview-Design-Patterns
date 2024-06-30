@@ -13,5 +13,5 @@ The two key things you need to know to achieve this are how each pattern works a
 apply to a given problem.
 
 * ### [Two Pointers](https://github.com/DjcSwe/Interview-Design-Patterns/blob/master/two_pointers/two_pointers_summary.md)
-* ### [Sliding Window](https://github.com/DjcSwe/Sliding-Window/blob/master/sliding_window/sliding-window-summary.md)
+* ### [Sliding Window](https://github.com/DjcSwe/Interview-Design-Patterns/blob/master/sliding_window/sliding-window-summary.md)
 * ### [Merge Intervals](https://github.com/DjcSwe/Interview-Design-Patterns/blob/master/merge-intervals/merge-intervals-summary.md)
