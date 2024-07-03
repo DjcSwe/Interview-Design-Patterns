@@ -18,3 +18,13 @@ in a calendar.
 meetings overlap each other.
 * Task scheduling in operating systems (OS): Schedule tasks for the OS based on task priority and the free slots in the
 machine’s processing schedule.
+
+<br/>
+
+## Merge Intervals
+
+### Solution
+
+### Time Complexity
+
+### Space Complexity
