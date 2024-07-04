@@ -1,4 +1,4 @@
-# Merge Intervals
+# Merge Intervals (Overview)
 The merge intervals pattern deals with problems involving overlapping intervals. Each interval is represented by a
 start and an end time. For example, an interval of `[10,20]` seconds means that the interval starts at `10` seconds and
 ends at `20` seconds. This pattern involves tasks such as merging intersecting intervals, inserting new intervals into
@@ -22,9 +22,22 @@ machine’s processing schedule.
 <br/>
 
 ## Merge Intervals
+We are given an array of closed intervals, intervals, where each interval has a start time and an end time.
+The input array is sorted with respect to the start times of each interval. For example, intervals =
+`[ [1,4], [3,6], [7,9] ]` is sorted in terms of start times `1`, `3`, and `7`. <br/>
+Your task is to merge the overlapping intervals and return a new output array consisting of only the non-overlapping
+intervals.
 
 ### Solution
+1. Insert the first interval from the input list into the output list.
+2. Traverse the input list of intervals. For each interval in the input list, we do the following:
+   * If the input interval is overlapping with the last interval in the output list, merge these two intervals and
+   replace the last interval of the output list with this merged interval.
+   * Otherwise, add the input interval to the output list.
 
 ### Time Complexity
+The time complexity of this solution is *O*(*n*), where *n* is the number of intervals in the input list.
 
 ### Space Complexity
+The space complexity of this solution is *O*(*1*), since we only use constant space other than the input and output
+data structures.
