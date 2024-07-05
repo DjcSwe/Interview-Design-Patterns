@@ -41,3 +41,26 @@ The time complexity of this solution is *O*(*n*), where *n* is the number of int
 ### Space Complexity
 The space complexity of this solution is *O*(*1*), since we only use constant space other than the input and output
 data structures.
+
+<br />
+
+## Insert Interval 
+Given a sorted list of nonoverlapping intervals and a new interval, your task is to insert the new interval into the
+correct position while ensuring that the resulting list of intervals remains sorted and nonoverlapping. Each interval
+is a pair of nonnegative numbers, the first being the start time and the second being the end time of the interval.
+
+### Solution 
+1. Append all intervals occurring before the new interval to the output list until we find an interval that starts
+after the starting point of the new interval.
+2. If there is an overlap between the last interval in the output list and the new interval, merge them by updating
+the end value of the last interval. Otherwise, append the new interval to the output list.
+3. Continue iterating through the remaining intervals and merge the overlapping intervals with the last interval in 
+the output list.
+4. Return the final output list containing the merged intervals.
+
+### Time Complexity
+The time complexity is *O*(*n*), where *n* is the number of intervals in the input list.
+This is because we iterate through the list once, checking and merging intervals as necessary.
+
+### Space Complexity
+The space complexity is *O*(1), since we only use constant space other than the input and output data structures.
