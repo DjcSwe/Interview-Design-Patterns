@@ -5,18 +5,18 @@ ends at `20` seconds. This pattern involves tasks such as merging intersecting i
 existing sets, or determining the minimum number of intervals needed to cover a given range. The most common problems
 solved using this pattern are event scheduling, resource allocation, and time slot consolidation.
 
-#### Does your problem match this pattern?
+### Does your problem match this pattern?
 Yes, if both of these conditions are fulfilled:
-* Array of intervals: The input data is an array of intervals.
-* Overlapping intervals: The problem requires dealing with overlapping intervals, either to find their union,
+* **Array of intervals:** The input data is an array of intervals.
+* **Overlapping intervals:** The problem requires dealing with overlapping intervals, either to find their union,
 their intersection, or the gaps between them.
 
-#### Real world problems.
-* Display busy schedule: Display the busy hours of a user to other users without revealing the individual meeting slots
+### Real world problems.
+* **Display busy schedule:** Display the busy hours of a user to other users without revealing the individual meeting slots
 in a calendar. 
-* Schedule a new meeting: Add a new meeting to the tentative meeting schedule of a user in such a way that no two 
+* **Schedule a new meeting:** Add a new meeting to the tentative meeting schedule of a user in such a way that no two 
 meetings overlap each other.
-* Task scheduling in operating systems (OS): Schedule tasks for the OS based on task priority and the free slots in the
+* **Task scheduling in operating systems (OS):** Schedule tasks for the OS based on task priority and the free slots in the
 machine’s processing schedule.
 
 <br/>
