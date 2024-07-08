@@ -1,16 +1,24 @@
 def merge_intervals(intervals):
     if not intervals:
         return None
-    result = []
-    result.append([intervals[0][0], intervals[0][1]])
+
+    result = [[intervals[0][0], intervals[0][1]]]
+
     for i in range(1, len(intervals)):
+        # Last interval present in the output list
         last_added_interval = result[len(result) - 1]
+
+        # Variables to store the start and end times of the current interval
         cur_start = intervals[i][0]
         cur_end = intervals[i][1]
-        prev_end = last_added_interval[1]
 
-        if cur_start <= prev_end:
-            result[-1][1] = max(cur_end, prev_end)
+        # The end time of the last interval present in the output list
+        last_added_end = last_added_interval[1]
+
+        # Overlapping condition
+        if cur_start <= last_added_end:
+            result[-1][1] = max(cur_end, last_added_end)
+        # No overlap
         else:
             result.append([cur_start, cur_end])
     return result
