@@ -64,3 +64,16 @@ This is because we iterate through the list once, checking and merging intervals
 
 ### Space Complexity
 The space complexity is *O*(1), since we only use constant space other than the input and output data structures.
+
+<br />
+
+## Interval List Intersections
+For two lists of closed intervals given as input, `interval_list_a` and `interval_list_b`, where each interval has its 
+own start and end time, write a function that returns the intersection of the two interval lists. <br />
+For example, the intersection of [3,8] and [5,10] is [5,8]. 
+
+### Solution
+
+### Time Complexity
+
+### Space Complexity
