@@ -87,3 +87,14 @@ through the list once, checking and merging intervals as necessary.
 
 ### Space Complexity
 The space complexity is *O*(1), since we only use constant space other than the input and output data structures.
+
+<br />
+
+## Employee Free Time
+
+### Solution
+
+### Time Complexity 
+
+### Space Complexity
+
