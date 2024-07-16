@@ -12,17 +12,17 @@ Yes, if both of these conditions are fulfilled:
 their intersection, or the gaps between them.
 
 ### Real world problems.
-* **Display busy schedule:** Display the busy hours of a user to other users without revealing the individual meeting slots
-in a calendar. 
+* **Display busy schedule:** Display the busy hours of a user to other users without revealing the individual meeting 
+slots in a calendar. 
 * **Schedule a new meeting:** Add a new meeting to the tentative meeting schedule of a user in such a way that no two 
 meetings overlap each other.
-* **Task scheduling in operating systems (OS):** Schedule tasks for the OS based on task priority and the free slots in the
-machine’s processing schedule.
+* **Task scheduling in operating systems (OS):** Schedule tasks for the OS based on task priority and the free slots in 
+the machine’s processing schedule.
 
 <br/>
 
 ## Merge Intervals
-We are given an array of closed intervals, intervals, where each interval has a start time and an end time.
+We are given an array of closed intervals, `intervals`, where each interval has a start time and an end time.
 The input array is sorted with respect to the start times of each interval. For example, intervals =
 `[ [1,4], [3,6], [7,9] ]` is sorted in terms of start times `1`, `3`, and `7`. <br/>
 Your task is to merge the overlapping intervals and return a new output array consisting of only the non-overlapping

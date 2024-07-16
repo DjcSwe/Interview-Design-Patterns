@@ -2,6 +2,7 @@ def merge_intervals(intervals):
     if not intervals:
         return None
 
+    # Copy the first interval to the output list
     result = [[intervals[0][0], intervals[0][1]]]
 
     for i in range(1, len(intervals)):
