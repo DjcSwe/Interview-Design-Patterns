@@ -1,6 +1,7 @@
 def insert_interval(existing_intervals, new_interval):
     # Read the starting and ending time of the new interval, into separate variables
-    new_start, new_end = new_interval[0], new_interval[1]
+    new_start = new_interval[0]
+    new_end = new_interval[1]
 
     # Initialize variables to help in iterating over the existing intervals list
     i = 0
@@ -8,20 +9,22 @@ def insert_interval(existing_intervals, new_interval):
 
     # Initialize an empty list to store the output
     output = []
+
+    # Add the intervals that start before the new interval.
     while i < n and existing_intervals[i][0] < new_start:
         output.append(existing_intervals[i])
         i = i + 1
 
     # If the new interval starts after the end of the last interval appended to the output list,
-    # just append the new interval to the output list.
+    # just append the new interval to the output list
     if not output or output[-1][1] < new_start:
         output.append(new_interval)
     # Otherwise merge the two intervals
     else:
-        # Copy any remaining intervals to the output list,
+        # Copy any remaining intervals to the output list
         output[-1][1] = max(output[-1][1], new_end)
 
-    # similarly merging any overlaping intervals as we go
+    # similarly merging any overlapping intervals as we go
     while i < n:
         ei = existing_intervals[i]
         start, end = ei[0], ei[1]
