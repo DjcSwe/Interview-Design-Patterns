@@ -17,20 +17,29 @@ def insert_interval(existing_intervals, new_interval):
 
     # If the new interval starts after the end of the last interval appended to the output list,
     # just append the new interval to the output list
+    # if (output is empty) or (last-added-interval-end-time is less than new-interval-start-time)
     if not output or output[-1][1] < new_start:
         output.append(new_interval)
+
     # Otherwise merge the two intervals
     else:
         # Copy any remaining intervals to the output list
+        # Last-added-interval-end-time is set to the maximum of (new-end-time or last-added-interval-end-time)
         output[-1][1] = max(output[-1][1], new_end)
 
     # similarly merging any overlapping intervals as we go
+    # (remaining intervals to be added and merged)
     while i < n:
-        ei = existing_intervals[i]
-        start, end = ei[0], ei[1]
+        remaining_interval = existing_intervals[i]
+        start = remaining_interval[0]
+        end = remaining_interval[1]
+
+        # if (last-added-interval-end-time) is less than (current-remaining-interval-start-time)
         if output[-1][1] < start:
-            output.append(ei)
+            output.append(remaining_interval)
         else:
+
+            # set the last-added-interval-end-time to the maximum of its self or the remaining-interval-end-time
             output[-1][1] = max(output[-1][1], end)
         i += 1
     return output
