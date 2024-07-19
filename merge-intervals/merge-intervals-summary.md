@@ -127,3 +127,30 @@ We use a heap in the solution, which can have a maximum of *n* elements. Hence, 
 is *O*(*n*), where *n* is the number of employees.
 
 <br/>
+
+## Task Scheduler 
+Given a character array tasks, where each character represents a unique task, and a positive integer n that represents
+the cooling period between any two identical tasks, find the minimum number of time units the CPU will need to complete
+all the given tasks. Each task requires one unit to perform, and the CPU must wait for at least n units of time before
+it can repeat the same task. During the cooling period, the CPU may perform other tasks or remain idle.
+
+### Solution
+1. Store the frequency of each task and then sort them based on these frequencies. Begin by calculating the maximum
+possible idle time given by: *(max frequency−1) × cooling period*. 
+Here, *max frequency* refers to the highest frequency of any task in the sequence, and the *cooling period* is the 
+specified interval between identical tasks. This formula represents the maximum time the CPU could potentially remain
+idle between executions of tasks of the same type.
+2. Next, iterate over the sorted task frequencies and update the idle time accordingly by subtracting the idle time
+from the frequency of each task until the idle time becomes negative or all tasks have been processed. The adjustment
+to the idle time during each iteration is calculated as: *idle time=idle time−min(max frequency−1,current frequency)*,
+where *current frequency* represents the frequency of the task currently being processed.
+3. Finally, return the total time required, which is the sum of the length of the task sequence and the computed idle
+time, expressed as *length of tasks+idle time*. 
+
+### Time Complexity
+The time complexity of counting the frequencies of tasks is *O*(*n*), where *n* is the total number of tasks. 
+Sorting the frequencies takes constant time *O*(1) due to the fixed size (26 for the 26 letters of the alphabet).
+The proceeding steps also take constant time. Consequently, the overall time complexity of the solution is *O*(*n*). 
+
+### Space Complexity
+The space complexity is *O*(1) because it requires constant space to store task frequencies.
