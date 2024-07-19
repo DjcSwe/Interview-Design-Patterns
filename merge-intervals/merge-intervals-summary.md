@@ -73,21 +73,21 @@ own start and end time, write a function that returns the intersection of the tw
 For example, the intersection of [3,8] and [5,10] is [5,8]. 
 
 ### Solution
-1. Append all intervals occurring before the new interval to the output list until we find an interval that starts
-after the starting point of the new interval.
-2. If there is an overlap between the last interval in the output list and the new interval, merge them by updating the 
-end value of the last interval. Otherwise, append the new interval to the output list.
-3. Continue iterating through the remaining intervals and merge the overlapping intervals with the last interval in the 
-output list.
-4. Return the final output list containing the merged intervals.
+1. Set two pointers, `i` and `j`, at the beginning of both lists, respectively, for their iteration.
+2. While iterating, find the latest starting time and the earliest ending time for each pair of
+`intervals interval_list_a[i]` and `interval_list_b[j]` .
+3. If the latest starting time is less than or equal to the earliest ending time, store it as an intersection.
+4. Increment the pointer (`i` or `j`) of the list having the smaller end time of the current interval.
+5. Keep iterating until either list is fully traversed.
+6. Return the list of intersections.
 
 ### Time Complexity
-The time complexity is *O*(*n*), where *n* is the number of intervals in the input list. This is because we iterate
-through the list once, checking and merging intervals as necessary.
+The time complexity is *O*(*n* + *m*), where *n* and *m* are the number of meetings in `interval_list_a` and
+`interval_list_b`, respectively.
 
 ### Space Complexity
-The space complexity is *O*(1), since we only use constant space other than the input and output data structures.
-
+The space complexity is *O*(1) as only a fixed amount of memory is consumed by a few temporary variables for
+computations performed by the algorithm.
 <br />
 
 ## Employee Free Time
