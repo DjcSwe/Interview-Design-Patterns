@@ -25,3 +25,13 @@ large blocks can be implemented in place to optimize memory usage.
 
 <br />
 
+## Reverse Linked-List
+Given the head of a singly linked list, reverse the linked list and return its updated head.
+
+### Solution
+
+
+### Time Complexity
+
+
+### Space Complexity
