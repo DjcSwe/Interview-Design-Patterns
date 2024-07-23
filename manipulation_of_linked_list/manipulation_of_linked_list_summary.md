@@ -29,9 +29,15 @@ large blocks can be implemented in place to optimize memory usage.
 Given the head of a singly linked list, reverse the linked list and return its updated head.
 
 ### Solution
-
+1. Initialize three pointers: `prev`, `next`, and `curr`.
+2. Reverse the links between adjacent nodes in a loop using the `next`, `curr`, and `prev` pointers.
+3. After reversing the linked list, update the head pointer to the last node of the original linked list,
+which is now the first node of the reversed linked list.
+4. Return the updated head pointer.
 
 ### Time Complexity
-
+The time complexity of this solution is *O*(*n*), because we reversed the linked list in a single pass, where *n* is
+the number of nodes in a linked list.
 
 ### Space Complexity
+The space complexity of this solution is *O*(*1*), because no extra memory is used.
