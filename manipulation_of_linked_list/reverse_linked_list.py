@@ -53,7 +53,8 @@ def print_list_with_forward_arrow(linked_list_node):
 
 
 def reverse(head):
-    prev, next = None, None
+    prev = None
+    next = None
     curr = head
 
     while curr is not None:
